@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shree Bikathnath Food & Organic | Organic Pahadi Ghee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+    :root{--green:#0b3b22;--green2:#145c35;--gold:#d8a23b;--gold2:#ffcf63;--cream:#fff8e7;--dark:#142018;--white:#fff}
+    body{font-family:Poppins,sans-serif;color:var(--dark);background:linear-gradient(135deg,#fffdf5,#f7efd9 45%,#e9f5df);overflow-x:hidden}
+    a{text-decoration:none}.container{width:min(1180px,92%);margin:auto}.section{padding:90px 0;position:relative}.title{text-align:center;margin-bottom:48px}.title span{color:var(--gold);font-weight:800}.title h2{font-family:Cinzel,serif;color:var(--green);font-size:clamp(32px,4vw,52px);margin-top:8px}.title p{max-width:650px;margin:14px auto 0;color:#546b59;line-height:1.8}
+    .page{position:relative;overflow:hidden}.glow{position:absolute;width:420px;height:420px;border-radius:50%;background:rgba(216,162,59,.22);filter:blur(60px);animation:floatGlow 7s ease-in-out infinite alternate;z-index:0}.glow.one{top:-120px;left:-120px}.glow.two{right:-140px;bottom:20%;background:rgba(20,92,53,.22);animation-delay:1.5s}
+    header{position:sticky;top:0;z-index:99;background:rgba(255,253,245,.90);backdrop-filter:blur(18px);border-bottom:1px solid rgba(216,162,59,.18)}.nav-wrap{height:86px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:12px;font-family:Cinzel,serif;font-weight:800;color:var(--green);min-width:0}.brand span{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.brand img{width:62px;height:62px;object-fit:contain;filter:drop-shadow(0 8px 14px rgba(0,0,0,.18));animation:logoPulse 3s ease-in-out infinite}nav{display:flex;gap:25px;align-items:center}nav a{color:var(--green);font-weight:700;font-size:15px;position:relative}nav a:after{content:"";position:absolute;left:0;bottom:-7px;width:0;height:2px;background:var(--gold);transition:.35s}nav a:hover:after{width:100%}.call-btn{padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;font-weight:800;box-shadow:0 12px 26px rgba(11,59,34,.25);transition:.35s;white-space:nowrap}.call-btn:hover{transform:translateY(-3px)}.menu-toggle{display:none;width:44px;height:44px;border-radius:14px;background:var(--green);color:#fff;font-size:22px;align-items:center;justify-content:center;box-shadow:0 10px 24px rgba(11,59,34,.22)}#menu-check{display:none}
+    .hero{position:relative;z-index:2;display:grid;grid-template-columns:1.04fr .96fr;align-items:center;gap:48px;min-height:calc(100vh - 86px);padding:35px 0}.badge{display:inline-flex;align-items:center;gap:10px;padding:9px 18px;border-radius:999px;background:rgba(255,255,255,.72);border:1px solid rgba(216,162,59,.45);box-shadow:0 10px 30px rgba(0,0,0,.06);color:var(--green);font-weight:800;animation:fadeUp .8s ease both}.badge span{width:10px;height:10px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 8px rgba(216,162,59,.16)}h1{margin-top:24px;font-family:Cinzel,serif;font-size:clamp(42px,6.5vw,82px);line-height:1.05;color:var(--green);text-shadow:0 3px 0 rgba(216,162,59,.22);animation:fadeUp .9s ease .1s both}h1 strong{display:block;background:linear-gradient(135deg,#936112,var(--gold),#fff0a7,var(--gold));-webkit-background-clip:text;color:transparent;animation:shine 4s linear infinite;background-size:250% auto}.hero p{margin:24px 0 34px;max-width:610px;font-size:18px;line-height:1.8;color:#385140;animation:fadeUp .9s ease .2s both}.actions{display:flex;flex-wrap:wrap;gap:16px;animation:fadeUp .9s ease .3s both}.primary,.secondary{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 28px;border-radius:18px;font-weight:800;transition:.35s}.primary{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#3a2505;box-shadow:0 18px 36px rgba(216,162,59,.34)}.secondary{color:var(--green);border:2px solid rgba(11,59,34,.18);background:rgba(255,255,255,.6)}.primary:hover,.secondary:hover{transform:translateY(-4px)}.stats{margin-top:42px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.stat{padding:20px 16px;border-radius:22px;background:rgba(255,255,255,.65);border:1px solid rgba(255,255,255,.8);box-shadow:0 16px 34px rgba(0,0,0,.08);backdrop-filter:blur(12px)}.stat b{display:block;font-family:Cinzel,serif;color:var(--green);font-size:26px}.stat small{color:#526856;font-weight:600}
+    .visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:590px;animation:fadeIn 1s ease both}.circle-bg{position:absolute;width:min(520px,92vw);height:min(520px,92vw);border-radius:50%;background:linear-gradient(135deg,rgba(255,255,255,.8),rgba(255,246,211,.85));box-shadow:inset 0 0 0 12px rgba(216,162,59,.16),0 30px 80px rgba(11,59,34,.18);animation:rotateSlow 18s linear infinite}.circle-bg:before,.circle-bg:after{content:"";position:absolute;inset:18px;border-radius:50%;border:2px dashed rgba(216,162,59,.55)}.circle-bg:after{inset:-18px;border-color:rgba(11,59,34,.22);animation:rotateReverse 14s linear infinite}.main-logo{position:relative;width:min(560px,92vw);max-height:560px;object-fit:contain;filter:drop-shadow(0 32px 40px rgba(0,0,0,.25));animation:floatLogo 4.5s ease-in-out infinite;z-index:3}.leaf,.drop{position:absolute;z-index:4;border-radius:999px;pointer-events:none}.leaf{width:82px;height:36px;background:linear-gradient(135deg,#1c7a3f,#a6d66a);border:2px solid rgba(255,255,255,.7);box-shadow:0 14px 28px rgba(20,92,53,.28);animation:leafMove 5s ease-in-out infinite}.leaf.l1{top:70px;right:30px}.leaf.l2{bottom:92px;left:8px;animation-delay:1.4s;transform:rotate(28deg)}.drop{width:28px;height:38px;background:linear-gradient(180deg,#fff0a0,#f4a800);top:120px;left:30px;transform:rotate(18deg);box-shadow:0 12px 22px rgba(216,162,59,.35);animation:dropFloat 3.8s ease-in-out infinite}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.card{padding:28px 22px;border-radius:28px;background:rgba(255,255,255,.76);border:1px solid rgba(216,162,59,.26);box-shadow:0 18px 42px rgba(0,0,0,.08);backdrop-filter:blur(14px);transition:.35s}.card:hover{transform:translateY(-9px);box-shadow:0 26px 60px rgba(11,59,34,.16)}.icon{width:58px;height:58px;display:grid;place-items:center;border-radius:18px;background:linear-gradient(135deg,var(--green),var(--green2));color:var(--gold2);font-size:27px;margin-bottom:16px}.card h3{color:var(--green);font-family:Cinzel,serif;margin-bottom:10px;font-size:21px}.card p{color:#526856;line-height:1.75;font-size:14px}
+    .about-grid,.product-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.about-img,.product-img{min-height:430px;border-radius:34px;background:linear-gradient(135deg,rgba(11,59,34,.10),rgba(216,162,59,.18));display:grid;place-items:center;box-shadow:0 25px 70px rgba(0,0,0,.12);overflow:hidden}.about-img img,.product-img img{width:86%;filter:drop-shadow(0 28px 30px rgba(0,0,0,.22));animation:floatLogo 5s ease-in-out infinite}.content-box h2{font-family:Cinzel,serif;color:var(--green);font-size:44px;margin-bottom:18px}.content-box p{color:#4b6250;line-height:1.9;margin-bottom:18px}.list{display:grid;gap:14px;margin-top:22px}.list li{list-style:none;padding:15px 18px;border-radius:18px;background:#fff;border-left:5px solid var(--gold);box-shadow:0 10px 24px rgba(0,0,0,.06);font-weight:600;color:var(--green)}
+    .products{background:rgba(255,255,255,.38)}.price-card{background:linear-gradient(135deg,var(--green),#092816);color:#fff;border-radius:34px;padding:34px;box-shadow:0 24px 60px rgba(11,59,34,.25)}.price-card h3{font-family:Cinzel,serif;font-size:30px;color:var(--gold2);margin-bottom:10px}.price{font-size:44px;font-weight:900;margin:14px 0}.price span{font-size:16px;color:#d7eadf}.price-card p{color:#dcefe3}.price-card .primary{margin-top:22px}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.step{position:relative;padding:30px;border-radius:28px;background:#fff;box-shadow:0 18px 40px rgba(0,0,0,.07)}.step b{font-size:42px;color:rgba(216,162,59,.55);font-family:Cinzel,serif}.step h3{color:var(--green);margin:12px 0 8px}.step p{color:#526856;line-height:1.7}
+    .contact-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px}.contact-info{border-radius:34px;padding:36px;background:linear-gradient(135deg,var(--green),#092816);color:#fff}.contact-info h2{font-family:Cinzel,serif;font-size:36px;color:var(--gold2);margin-bottom:15px}.contact-info p{line-height:1.8;color:#e6f5ea}.contact-item{margin-top:22px;padding:16px;border-radius:18px;background:rgba(255,255,255,.1)}form{border-radius:34px;padding:36px;background:#fff;box-shadow:0 20px 50px rgba(0,0,0,.09)}input,textarea{width:100%;padding:16px 18px;margin-bottom:15px;border:1px solid rgba(11,59,34,.16);border-radius:16px;font-family:Poppins;font-size:15px;outline:none}textarea{min-height:130px;resize:vertical}button{border:0;cursor:pointer;font-family:Poppins}.form-btn{width:100%;height:55px;border-radius:18px;background:linear-gradient(135deg,var(--gold),var(--gold2));font-weight:900;color:#3a2505;font-size:16px}
+    footer{background:#061d10;color:#d9eadf;padding:70px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.1fr;gap:34px}.footer-logo{display:flex;align-items:center;gap:12px;color:#fff;font-family:Cinzel,serif;font-weight:800;font-size:20px;margin-bottom:16px}.footer-logo img{width:68px}.footer-col p{line-height:1.8;color:#bed5c6}.footer-col h3{color:var(--gold2);margin-bottom:16px;font-family:Cinzel,serif}.footer-col a{display:block;color:#d9eadf;margin:10px 0;transition:.3s}.footer-col a:hover{color:var(--gold2);transform:translateX(4px)}.social{display:flex;gap:12px;margin-top:18px}.social a{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.1);margin:0}.copyright{text-align:center;border-top:1px solid rgba(255,255,255,.12);margin-top:45px;padding-top:22px;color:#aec4b5;font-size:14px}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}@keyframes fadeIn{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}@keyframes floatLogo{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-18px) scale(1.02)}}@keyframes rotateSlow{to{transform:rotate(360deg)}}@keyframes rotateReverse{to{transform:rotate(-360deg)}}@keyframes logoPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}@keyframes shine{to{background-position:250% center}}@keyframes floatGlow{to{transform:translate(40px,30px) scale(1.15)}}@keyframes leafMove{0%,100%{transform:translateY(0) rotate(-25deg)}50%{transform:translateY(-20px) rotate(-12deg)}}@keyframes dropFloat{0%,100%{transform:translateY(0) rotate(18deg)}50%{transform:translateY(24px) rotate(8deg)}}
+    @media(max-width:980px){.menu-toggle{display:flex;cursor:pointer}nav{position:fixed;top:86px;left:0;width:100%;display:grid;grid-template-columns:1fr;background:rgba(255,253,245,.98);padding:18px 5%;gap:0;box-shadow:0 20px 45px rgba(0,0,0,.12);transform:translateY(-125%);opacity:0;pointer-events:none;transition:.35s}nav a{padding:14px 0;border-bottom:1px solid rgba(11,59,34,.10);font-size:16px}#menu-check:checked ~ nav{transform:translateY(0);opacity:1;pointer-events:auto}.hero,.about-grid,.product-grid,.contact-wrap{grid-template-columns:1fr;text-align:center}.hero{min-height:auto;padding:55px 0 45px}.actions{justify-content:center}.stats{max-width:620px;margin-left:auto;margin-right:auto}.cards,.process{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}.visual{min-height:500px}.list li{text-align:left}.about-img,.product-img{min-height:340px}.content-box h2{font-size:40px}.contact-info{text-align:left}form{text-align:left}}
+    @media(max-width:768px){.container{width:min(100% - 28px,1180px)}.section{padding:72px 0}.title{margin-bottom:34px}.title h2{font-size:clamp(28px,7vw,40px)}h1{font-size:clamp(38px,11vw,58px)}.hero p{font-size:16px;line-height:1.7}.main-logo{width:min(420px,90vw)}.circle-bg{width:min(390px,86vw);height:min(390px,86vw)}.visual{min-height:405px}.stats{grid-template-columns:1fr 1fr 1fr;gap:10px}.stat{padding:16px 8px}.stat b{font-size:22px}.card,.step{padding:24px 18px}.price-card{padding:28px}.price{font-size:34px}.footer-grid{gap:25px}}
+    @media(max-width:580px){.brand span{font-size:13px;max-width:145px}.brand img{width:48px;height:48px}.call-btn{display:none}.nav-wrap{height:76px}nav{top:76px}.stats,.cards,.process,.footer-grid{grid-template-columns:1fr}.stats{gap:12px}.visual{min-height:360px;margin-top:10px}.main-logo{width:min(340px,92vw)}.circle-bg{width:min(320px,84vw);height:min(320px,84vw)}.leaf,.drop{display:none}.section{padding:58px 0}.content-box h2{font-size:31px}.about-img,.product-img{min-height:260px;border-radius:24px}.contact-info,form{padding:24px;border-radius:24px}.footer-logo{font-size:18px}.footer-logo img{width:56px}.primary,.secondary{width:100%;min-height:52px}.badge{font-size:13px}.hero{text-align:center;padding-top:34px}.title p,.content-box p{font-size:15px}.copyright{font-size:12px}}
+    @media(max-width:390px){.brand span{max-width:112px}.main-logo{width:min(300px,92vw)}h1{font-size:34px}.circle-bg{width:285px;height:285px}.visual{min-height:320px}.stat b{font-size:20px}.price-card h3{font-size:24px}.contact-info h2{font-size:30px}}
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="glow one"></div><div class="glow two"></div>
+
+    <header>
+      <div class="container nav-wrap">
+        <a class="brand" href="#home"><img src="SB_LOGO1.png" alt="Bikathnath Logo"><span>Shree Bikathnath Food & Organic</span></a>
+        <input type="checkbox" id="menu-check">
+        <label for="menu-check" class="menu-toggle">☰</label>
+        <nav>
+          <a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#quality">Quality</a><a href="#process">Process</a><a href="#contact">Contact</a>
+        </nav>
+        <a class="call-btn" href="tel:+917054743974">Order Now</a>
+      </div>
+    </header>
+
+    <section class="hero container" id="home">
+      <div>
+        <div class="badge"><span></span> Pure Organic Pahadi Ghee</div>
+        <h1>Shree Bikathnath <strong>Organic Ghee</strong></h1>
+        <p>Traditional taste, premium quality and natural purity in every spoon. Made for families who prefer authentic, healthy and organic food products.</p>
+        <div class="actions"><a class="primary" href="#products">Explore Product</a><a class="secondary" href="#quality">Why Choose Us</a></div>
+        <div class="stats"><div class="stat"><b>100%</b><small>Natural Quality</small></div><div class="stat"><b>Pure</b><small>Pahadi Taste</small></div><div class="stat"><b>Fresh</b><small>Organic Product</small></div></div>
+      </div>
+      <div class="visual"><div class="circle-bg"></div><div class="leaf l1"></div><div class="leaf l2"></div><div class="drop"></div><img class="main-logo" src="SB_LOGO1.png" alt="Bikathnath Food and Organic Logo"></div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-img"><img src="SB_LOGO1.png" alt="Organic Ghee"></div>
+        <div class="content-box">
+          <h2>About Bikathnath</h2>
+          <p>Bikathnath Food & Organic brings natural, traditional and premium organic food products with a strong focus on purity, taste and trust.</p>
+          <p>Our Organic Pahadi Ghee is inspired by village freshness and mountain purity, designed for daily healthy cooking and authentic Indian taste.</p>
+          <ul class="list"><li>Premium organic product quality</li><li>Traditional taste with modern packaging</li><li>Perfect for family, pooja and daily cooking</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products" id="products">
+      <div class="container product-grid">
+        <div class="content-box">
+          <h2>Organic Pahadi Ghee</h2>
+          <p>Rich aroma, golden texture and pure traditional flavor. Shree Bikathnath Organic Pahadi Ghee is suitable for roti, dal, sweets, pooja and healthy cooking.</p>
+          <ul class="list"><li>Natural golden texture</li><li>Rich aroma and smooth taste</li><li>Premium glass/jar style branding ready</li></ul>
+        </div>
+        <div class="price-card">
+          <h3>Featured Product</h3>
+          <p>Shree Bikathnath Organic Pahadi Ghee</p>
+          <div class="price">Pure <span>/ Premium Quality</span></div>
+          <p>Available in multiple packing sizes as per requirement.</p>
+          <a class="primary" href="#contact">Request Price</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="quality">
+      <div class="container">
+        <div class="title"><span>Our Quality</span><h2>Why Choose Us</h2><p>Professional branding, trusted purity and authentic taste for every household.</p></div>
+        <div class="cards">
+          <div class="card"><div class="icon">🌿</div><h3>Organic Purity</h3><p>Prepared with a clean and natural approach to deliver authentic organic goodness.</p></div>
+          <div class="card"><div class="icon">🥄</div><h3>Rich Taste</h3><p>Perfect aroma, smooth texture and traditional flavor for daily cooking.</p></div>
+          <div class="card"><div class="icon">🏔️</div><h3>Pahadi Feel</h3><p>Inspired by mountain freshness and natural village lifestyle.</p></div>
+          <div class="card"><div class="icon">📦</div><h3>Premium Pack</h3><p>Attractive product branding suitable for retail and online sales.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="container">
+        <div class="title"><span>Simple Process</span><h2>From Purity To Your Home</h2><p>Every step is focused on quality, freshness and customer satisfaction.</p></div>
+        <div class="process">
+          <div class="step"><b>01</b><h3>Selection</h3><p>Best quality raw material and natural ingredients.</p></div>
+          <div class="step"><b>02</b><h3>Preparation</h3><p>Traditional process for authentic aroma and taste.</p></div>
+          <div class="step"><b>03</b><h3>Packing</h3><p>Clean and attractive packaging for premium feel.</p></div>
+          <div class="step"><b>04</b><h3>Delivery</h3><p>Fresh product delivered to customers with care.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-wrap">
+        <div class="contact-info">
+          <h2>Contact Us</h2>
+          <p>For dealership, bulk order, product price or branding inquiry, contact Bikathnath Food & Organic.</p>
+          <div class="contact-item"><b>Phone:</b><br>+91 70547 43974</div>
+          <div class="contact-item"><b>Email:</b><br>info@bikathnath.com</div>
+          <div class="contact-item"><b>Location:</b><br>India</div>
+        </div>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="tel" placeholder="Mobile Number" required>
+          <input type="email" placeholder="Email Address">
+          <textarea placeholder="Write your message"></textarea>
+          <button class="form-btn" type="submit">Send Enquiry</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-logo"><img src="SB_LOGO1.png" alt="Bikathnath Logo"><span>Shree Bikathnath</span></div>
+            <p>Shree Bikathnath Food & Organic offers premium Organic Pahadi Ghee with traditional taste, natural purity and professional branding.</p>
+            <div class="social"><a href="#">f</a><a href="#">in</a><a href="#">ig</a><a href="#">wa</a></div>
+          </div>
+          <div class="footer-col"><h3>Quick Links</h3><a href="#home">Home</a><a href="#about">About</a><a href="#products">Products</a><a href="#quality">Quality</a></div>
+          <div class="footer-col"><h3>Products</h3><a href="#products">Organic Pahadi Ghee</a><a href="#products">Organic Food</a><a href="#products">Premium Pack</a><a href="#contact">Bulk Order</a></div>
+          <div class="footer-col"><h3>Contact</h3><a href="tel:+917054743974">+91 70547 43974</a><a href="mailto:info@bikathnath.com">info@bikathnath.com</a><a href="#contact">India</a></div>
+        </div>
+        <div class="copyright">© 2026 Shree Bikathnath Food & Organic. All Rights Reserved. Designed for premium organic brand.</div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
