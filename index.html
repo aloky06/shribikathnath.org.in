@@ -416,159 +416,90 @@
     .step p { color: var(--text-muted); font-size: 14px; line-height: 1.75; }
 
     /* ─── CONTACT ─── */
-    .contact-wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 32px; align-items: start; }
+    .contact-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+
     .contact-info {
-      border-radius: var(--radius-xl); padding: 40px 36px;
+      border-radius: var(--radius-xl); padding: 32px 28px;
       background: linear-gradient(160deg, var(--green) 0%, #061b0e 100%);
       color: #fff; box-shadow: var(--shadow-lg);
     }
-    .contact-info h2 { font-family: 'Playfair Display', serif; font-size: 36px; color: var(--gold-light); margin-bottom: 14px; }
-    .contact-info > p { color: rgba(255,255,255,.7); line-height: 1.8; font-size: 15px; margin-bottom: 24px; }
+    .contact-info h2 { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--gold-light); margin-bottom: 10px; }
+    .contact-info > p { color: rgba(255,255,255,.7); line-height: 1.8; font-size: 14px; margin-bottom: 18px; }
     .contact-item {
-      padding: 16px 18px; border-radius: var(--radius-md);
+      padding: 13px 15px; border-radius: var(--radius-md);
       background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
-    .contact-item b { color: var(--gold-light); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
-    .contact-item p { color: rgba(255,255,255,.8); font-size: 14px; margin-top: 4px; line-height: 1.65; }
+    .contact-item b { color: var(--gold-light); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .contact-item p { color: rgba(255,255,255,.8); font-size: 13px; margin-top: 3px; line-height: 1.6; }
 
-    .contact-form {
-      background: var(--white); border-radius: var(--radius-xl); padding: 40px 36px;
-      box-shadow: var(--shadow-md); border: 1px solid rgba(200,144,42,.15);
-      display: flex; flex-direction: column; gap: 18px;
-    }
-    .contact-form h3 {
-      font-family: 'Playfair Display', serif; font-size: 26px; color: var(--green); margin-bottom: 4px;
-    }
-    .contact-form .form-subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 6px; }
-    .form-group { display: flex; flex-direction: column; gap: 6px; }
-    .form-group label { font-size: 13px; font-weight: 600; color: var(--green); letter-spacing: .02em; }
-    .contact-form input, .contact-form select, .contact-form textarea {
-      padding: 13px 16px; border: 1.5px solid rgba(10,51,32,.15); border-radius: var(--radius-sm);
-      font-size: 15px; font-family: 'Inter', sans-serif; color: var(--text);
-      background: var(--cream); outline: none; transition: all .25s;
-    }
-    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
-      border-color: var(--gold); background: #fff;
-      box-shadow: 0 0 0 4px rgba(200,144,42,.1);
-    }
-    
-
-    .contact-whatsapp{
-      min-height: 100vh;
-      background: #f0f2f5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem 1rem;
-      font-family: 'Segoe UI', sans-serif;
-    }
-   
+    /* WhatsApp card — right side */
+    .contact-whatsapp { display: flex; align-items: flex-start; }
     .wa-card {
-      background: #fff;
-      border-radius: 16px;
-      width: 100%;
-      max-width: 460px;
-      overflow: hidden;
-      box-shadow: 0 4px 24px rgba(0,0,0,.10);
+      width: 100%; background: #fff;
+      border-radius: var(--radius-xl); overflow: hidden;
+      box-shadow: var(--shadow-md); border: 1px solid rgba(200,144,42,.15);
     }
-
     .wa-header {
-      background: #075E54;
-      padding: 1.5rem 1.75rem;
-      display: flex;
-      align-items: center;
-      gap: 14px;
+      background: #075E54; padding: 18px 22px;
+      display: flex; align-items: center; gap: 12px;
     }
     .wa-logo {
-      width: 48px; height: 48px;
-      border-radius: 50%;
+      width: 44px; height: 44px; border-radius: 50%;
       background: #25D366;
-      display: flex; align-items: center; justify-content: center;
-      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
-    .wa-logo svg { width: 26px; height: 26px; fill: #fff; }
-    .wa-header h2 { font-size: 17px; font-weight: 600; color: #fff; margin-bottom: 2px; }
-    .wa-header p  { font-size: 13px; color: rgba(255,255,255,.65); }
-
-    .wa-body { padding: 1.75rem; }
-
-    .form-group { margin-bottom: 1.25rem; }
-    .form-group label {
-      display: block; font-size: 13px; font-weight: 600;
-      color: #555; margin-bottom: 6px;
+    .wa-logo svg { width: 23px; height: 23px; fill: #fff; }
+    .wa-header h2 { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 2px; }
+    .wa-header p  { font-size: 12px; color: rgba(255,255,255,.65); }
+    .wa-body { padding: 20px 22px; }
+    .wa-body .form-group { display: flex; flex-direction: column; gap: 4px; margin-bottom: 12px; }
+    .wa-body .form-group label { font-size: 12px; font-weight: 600; color: var(--green); letter-spacing: .02em; }
+    .wa-body .form-group input,
+    .wa-body .form-group textarea {
+      padding: 9px 13px; border: 1.5px solid rgba(10,51,32,.15);
+      border-radius: var(--radius-sm); font-size: 14px;
+      font-family: 'Inter', sans-serif; color: var(--text);
+      background: var(--cream); outline: none; transition: all .25s;
     }
-    .form-group input,
-    .form-group textarea {
-      width: 100%; padding: 10px 14px;
-      border: 1.5px solid #e0e0e0;
-      border-radius: 10px;
-      background: #fafafa;
-      color: #222;
-      font-size: 14px;
-      font-family: inherit;
-      outline: none;
-      transition: border-color .2s, box-shadow .2s;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus {
-      border-color: #25D366;
+    .wa-body .form-group input:focus,
+    .wa-body .form-group textarea:focus {
+      border-color: #25D366; background: #fff;
       box-shadow: 0 0 0 3px rgba(37,211,102,.12);
-      background: #fff;
     }
-    .form-group textarea { resize: vertical; min-height: 100px; line-height: 1.6; }
-
-    .err-msg {
-      font-size: 12px; color: #e53935;
-      margin-top: 5px;
-      display: none; align-items: center; gap: 4px;
-    }
+    .wa-body .form-group textarea { resize: vertical; min-height: 85px; line-height: 1.6; }
+    .err-msg { font-size: 11px; color: #e53935; margin-top: 3px; display: none; align-items: center; gap: 3px; }
     .err-msg.show { display: flex; }
-
     .preview-box {
-      background: #f0faf4;
-      border-left: 3px solid #25D366;
-      border-radius: 0 10px 10px 0;
-      padding: 10px 14px;
-      font-size: 13px; color: #444; line-height: 1.7;
-      margin-bottom: 1.25rem;
-      display: none;
-      white-space: pre-line;
+      background: #f0faf4; border-left: 3px solid #25D366;
+      border-radius: 0 8px 8px 0; padding: 8px 12px;
+      font-size: 12px; color: #444; line-height: 1.7;
+      margin-bottom: 12px; display: none; white-space: pre-line;
     }
     .preview-box.show { display: block; }
-    .preview-label {
-      font-size: 11px; font-weight: 600; letter-spacing: .06em;
-      color: #999; text-transform: uppercase; margin-bottom: 4px;
-    }
-
+    .preview-label { font-size: 10px; font-weight: 600; letter-spacing: .06em; color: #999; text-transform: uppercase; margin-bottom: 3px; }
     .send-btn {
-      width: 100%; padding: 12px;
-      background: #25D366; color: #fff;
-      border: none; border-radius: 10px;
-      font-size: 15px; font-weight: 600;
-      font-family: inherit; cursor: pointer;
-      display: flex; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; padding: 11px; background: #25D366; color: #fff;
+      border: none; border-radius: var(--radius-md);
+      font-size: 14px; font-weight: 600; font-family: 'Inter', sans-serif;
+      cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;
       transition: background .2s, transform .1s;
+      box-shadow: 0 4px 16px rgba(37,211,102,.35);
     }
-    .send-btn:hover  { background: #22c35e; }
+    .send-btn:hover { background: #22c35e; transform: translateY(-2px); }
     .send-btn:active { transform: scale(.98); }
-    .send-btn svg { width: 18px; height: 18px; fill: #fff; }
-
+    .send-btn svg { width: 17px; height: 17px; fill: #fff; flex-shrink: 0; }
     .wa-footer {
-      padding: .75rem 1.75rem 1.25rem;
-      text-align: center; font-size: 12px; color: #aaa;
+      padding: 9px 22px 13px; text-align: center;
+      font-size: 11px; color: #aaa;
+      border-top: 1px solid rgba(0,0,0,.05);
     }
     .wa-footer span { color: #25D366; font-weight: 600; }
 
-    /* ── Responsive ── */
-    @media (max-width: 480px) {
-      body { align-items: flex-start; padding-top: 1.5rem; }
-      .wa-header { padding: 1.25rem; }
-      .wa-body   { padding: 1.25rem; }
-      .wa-logo   { width: 42px; height: 42px; }
-      .wa-logo svg { width: 22px; height: 22px; }
-      .wa-header h2 { font-size: 15px; }
-    }
+    /* old form hidden */
+    .contact-form { display: none; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: var(--green); letter-spacing: .02em; }
 
     /* ─── FOOTER ─── */
     footer { background: #040f07; color: rgba(255,255,255,.7); padding: 72px 0 24px; }
@@ -608,6 +539,7 @@
       nav a { padding: 14px 4px; border-bottom: 1px solid rgba(10,51,32,.08); }
       #menu-check:checked ~ nav { transform: translateY(0); opacity: 1; pointer-events: auto; }
       .hero,.about-grid,.product-grid,.contact-wrap { grid-template-columns: 1fr; }
+      .wa-card { max-width: 540px; margin: 0 auto; }
       .hero { min-height: auto; padding: 52px 0 40px; text-align: center; }
       .hero-sub,.content-box p { max-width: 100%; }
       .actions { justify-content: center; }
@@ -846,82 +778,157 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
 
-<section class="contact-whatsapp">
-    <div class="wa-card">
-    <div class="wa-header">
-      <div class="wa-logo">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      </div>
-      <div>
-        <h2>Send us a Message</h2>
-        <p>+91 63637 77534 · Usually replies instantly</p>
-      </div>
+
+     <!-- CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="title">
+      <div class="eyebrow">Get In Touch</div>
+      <h2>Contact Us</h2>
+      <p>For dealership, bulk order, product price or branding inquiry — we'd love to hear from you.</p>
     </div>
 
-    <div class="wa-body">
-      <div class="form-group">
-        <label for="f-name">Your Name *</label>
-        <input type="text" id="f-name" placeholder="Apna naam likhein">
-        <div class="err-msg" id="err-name">⚠ Naam required hai</div>
-      </div>
-      <div class="form-group">
-        <label for="f-msg">Your Message *</label>
-        <textarea id="f-msg" placeholder="Apna message likhein..."></textarea>
-        <div class="err-msg" id="err-msg">⚠ Message required hai</div>
+    <div class="contact-wrap">
+
+      <!-- LEFT: Info -->
+      <div class="contact-info">
+        <h2>Let's Connect</h2>
+        <p>Reach out for dealership opportunities, bulk orders, pricing or any product inquiry.</p>
+        <div class="contact-item"><b>Phone</b><p>+91 9472879003<br>+91 7870279423</p></div>
+        <div class="contact-item"><b>Email</b><p>shribikatnathfoodandorganic@gmail.com</p></div>
+        <div class="contact-item"><b>Corporate Office</b><p>Word No-1, Rampurcolony, Bhabhua<br>Dist. Kaimur (Bihar) — 821101</p></div>
+        <div class="contact-item"><b>Work Location</b><p>Village: Karar, Post: Kolhua, Block: Adhaura<br>Dist. Kaimur — Pin 821102</p></div>
       </div>
 
-      <div class="preview-box" id="preview">
-        <div class="preview-label">Message preview</div>
-        <span id="preview-text"></span>
+      <!-- RIGHT: WhatsApp Form -->
+      <div class="wa-card">
+        <div class="wa-header">
+          <div class="wa-logo">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <div>
+            <h2>WhatsApp Inquiry</h2>
+            <p>+91 94728 79003 · Usually replies instantly</p>
+          </div>
+        </div>
+        <div class="wa-body">
+          <div class="form-group">
+            <label for="wa-name">Your Name *</label>
+            <input type="text" id="wa-name" placeholder="Apna naam likhein">
+            <div class="err-msg" id="err-name">Name required hai</div>
+          </div>
+          <div class="form-group">
+            <label for="wa-mobile">Mobile Number *</label>
+            <input type="tel" id="wa-mobile" placeholder="Mobile number">
+            <div class="err-msg" id="err-mobile">Mobile required hai</div>
+          </div>
+          <div class="form-group">
+            <label for="wa-subject">Inquiry Type</label>
+            <input type="text" id="wa-subject" placeholder="e.g. Dealership, Bulk Order, Pricing">
+          </div>
+          <div class="form-group">
+            <label for="wa-msg">Message *</label>
+            <textarea id="wa-msg" placeholder="Apni requirements likhein..."></textarea>
+            <div class="err-msg" id="err-msg">Message required hai</div>
+          </div>
+          <div class="preview-box" id="wa-preview">
+            <div class="preview-label">Preview</div>
+            <span id="wa-preview-text"></span>
+          </div>
+          <button class="send-btn" id="wa-sendBtn">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            WhatsApp pe Bhejein
+          </button>
+        </div>
+        <div class="wa-footer">Powered by <span>WhatsApp</span></div>
       </div>
 
-      <button class="send-btn" id="sendBtn">
-        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        WhatsApp pe bhejein
-      </button>
     </div>
-
-    <div class="wa-footer">Powered by <span>WhatsApp</span></div>
   </div>
-  </section>
+</section>
 
-  <script>
-    const nameEl   = document.getElementById("f-name");
-    const msgEl    = document.getElementById("f-msg");
-    const preview  = document.getElementById("preview");
-    const prevText = document.getElementById("preview-text");
+<script>
+(function () {
+  var N = document.getElementById('wa-name'),
+      M = document.getElementById('wa-mobile'),
+      S = document.getElementById('wa-subject'),
+      T = document.getElementById('wa-msg'),
+      prev = document.getElementById('wa-preview'),
+      pt   = document.getElementById('wa-preview-text');
 
-    function updatePreview() {
-      const n = nameEl.value.trim();
-      const m = msgEl.value.trim();
-      if (n || m) {
-        preview.classList.add("show");
-        prevText.style.whiteSpace = "pre-line";
-        prevText.textContent = `Name: ${n || "—"}\nMessage: ${m || "—"}`;
-      } else {
-        preview.classList.remove("show");
-      }
+  function upd() {
+    var n=N.value.trim(), m=M.value.trim(), s=S.value.trim(), t=T.value.trim();
+    if (n || t) {
+      prev.classList.add('show');
+      pt.style.whiteSpace = 'pre-line';
+      pt.textContent = 'Name: '+(n||'—')+'\nMobile: '+(m||'—')+'\nInquiry: '+(s||'General')+'\nMessage: '+(t||'—');
+    } else { prev.classList.remove('show'); }
+  }
+
+  N.oninput = function(){ document.getElementById('err-name').classList.remove('show'); upd(); };
+  M.oninput = function(){ document.getElementById('err-mobile').classList.remove('show'); upd(); };
+  S.oninput = upd;
+  T.oninput = function(){ document.getElementById('err-msg').classList.remove('show'); upd(); };
+
+  document.getElementById('wa-sendBtn').onclick = function () {
+    var n=N.value.trim(), m=M.value.trim(),
+        s=S.value.trim()||'General Inquiry', t=T.value.trim(), ok=true;
+    if (!n) { document.getElementById('err-name').classList.add('show');   ok=false; }
+    if (!m) { document.getElementById('err-mobile').classList.add('show'); ok=false; }
+    if (!t) { document.getElementById('err-msg').classList.add('show');    ok=false; }
+    if (!ok) return;
+
+    // ✅ Yahan apna WhatsApp number daalo (country code ke saath, bina +)
+    var phone = '919472879003';
+    var text  = encodeURIComponent(
+      '*New Inquiry — Shree Bikathnath*\n\nName: '+n+'\nMobile: '+m+'\nInquiry: '+s+'\n\nMessage:\n'+t
+    );
+    window.open('https://wa.me/'+phone+'?text='+text, '_blank');
+  };
+})();
+</script>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+
+    const formData = {
+      name: form.name.value,
+      mobile: form.mobile.value,
+      email: form.email.value,
+      subject: form.subject.value,
+      message: form.message.value
+    };
+
+    try {
+      // let response = await fetch("/api/sendmail", {
+      //   method: "POST",
+      //   headers: {"Content-Type":"application/json"},
+      //   body: JSON.stringify(formData)
+      // });
+
+      let response = await fetch("/api/sendmail", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(formData)
+});
+
+
+      let result = await response.text();
+      alert(result);
+    } catch (error) {
+      alert("Error sending inquiry. Please try again.");
+      console.error(error);
     }
+  });
+</script>
 
-    nameEl.addEventListener("input", () => { document.getElementById("err-name").classList.remove("show"); updatePreview(); });
-    msgEl.addEventListener("input",  () => { document.getElementById("err-msg").classList.remove("show");  updatePreview(); });
-
-    document.getElementById("sendBtn").addEventListener("click", function () {
-      const name    = nameEl.value.trim();
-      const message = msgEl.value.trim();
-      let valid = true;
-
-      if (!name)    { document.getElementById("err-name").classList.add("show"); valid = false; }
-      if (!message) { document.getElementById("err-msg").classList.add("show");  valid = false; }
-      if (!valid) return;
-
-      const phone = "916363777534";
-      const text  = encodeURIComponent(`Name: ${name}\nMessage: ${message}`);
-      window.open(`https://wa.me/${phone}?text=${text}`, "_blank");
-    });
-  </script>
+        </div>
+      </div>
+    </section>
 
     <!-- FOOTER -->
     <footer>
@@ -966,52 +973,6 @@
       </div>
     </footer>
   </main>
-
-  <!-- <script>
-
-document.getElementById("contactForm").addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  const submitBtn = this.querySelector(".form-btn");
-  submitBtn.disabled = true;
-  submitBtn.innerText = "Sending...";
-
-  const formData = {
-    name: this.name.value,
-    mobile: this.mobile.value,
-    email: this.email.value,
-    subject: this.subject.value,
-    message: this.message.value
-  };
-
-  try {
-    const response = await fetch("/api/send-mail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData)
-    });
-
-    const result = await response.json();
-
-    if (result.success) {
-      alert("✅ Message Sent Successfully");
-      this.reset();
-    } else {
-      alert("❌ Mail Sending Failed: " + (result.message || ""));
-    }
-
-  } catch (error) {
-    console.error(error);
-    alert("❌ Server Error");
-  }
-
-  submitBtn.disabled = false;
-  submitBtn.innerText = "Send Inquiry →";
-});
-</script> --> 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
 </body>
 </html>
