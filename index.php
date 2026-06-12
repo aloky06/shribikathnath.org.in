@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shree Bikathnath Food & Organic | Organic Pahadi Ghee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    :root {
+      --green:       #0a3320;
+      --green-mid:   #115530;
+      --green-light: #1a7a44;
+      --gold:        #c8902a;
+      --gold-light:  #e8b84b;
+      --gold-pale:   #fef3d8;
+      --cream:       #fdfaf3;
+      --cream2:      #f5edd8;
+      --dark:        #111a14;
+      --text:        #2e4535;
+      --text-muted:  #5c7262;
+      --white:       #ffffff;
+      --shadow-sm:   0 2px 12px rgba(10,51,32,.08);
+      --shadow-md:   0 8px 32px rgba(10,51,32,.12);
+      --shadow-lg:   0 20px 60px rgba(10,51,32,.16);
+      --radius-sm:   10px;
+      --radius-md:   18px;
+      --radius-lg:   28px;
+      --radius-xl:   40px;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--cream);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; }
+    .container { width: min(1160px, 92%); margin: 0 auto; }
+    .section { padding: 96px 0; }
+
+    /* ─── DECORATIVE BG ─── */
+    .page { position: relative; }
+    .bg-orb {
+      position: fixed; border-radius: 50%; pointer-events: none; z-index: 0;
+      filter: blur(90px); opacity: .45; animation: orbFloat 12s ease-in-out infinite alternate;
+    }
+    .bg-orb.a { width:600px; height:600px; top:-200px; left:-200px; background: radial-gradient(circle, #c8902a33, transparent 70%); }
+    .bg-orb.b { width:500px; height:500px; bottom:0; right:-150px; background: radial-gradient(circle, #1a7a4422, transparent 70%); animation-delay: 3s; }
+    @keyframes orbFloat { to { transform: translate(30px, 40px) scale(1.1); } }
+
+    /* ─── HEADER ─── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(253,250,243,.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(200,144,42,.15);
+    }
+    .nav-wrap {
+      height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 16px;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 14px;
+      font-family: 'Playfair Display', serif; font-weight: 700;
+      color: var(--green); font-size: 17px; min-width: 0;
+    }
+    .brand img {
+      width: 54px; height: 54px; object-fit: contain;
+      border-radius: 50%; border: 2px solid rgba(200,144,42,.3);
+      box-shadow: 0 4px 14px rgba(10,51,32,.15);
+    }
+    .brand span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+    nav { display: flex; gap: 6px; align-items: center; }
+    nav a {
+      color: var(--text); font-weight: 500; font-size: 14px;
+      padding: 8px 14px; border-radius: var(--radius-sm);
+      transition: all .25s; letter-spacing: .01em;
+    }
+    nav a:hover { color: var(--green); background: rgba(200,144,42,.1); }
+
+    .call-btn {
+      padding: 11px 24px; border-radius: 999px;
+      background: var(--green); color: var(--white);
+      font-weight: 600; font-size: 14px; letter-spacing: .02em;
+      box-shadow: 0 4px 18px rgba(10,51,32,.28);
+      transition: all .3s; white-space: nowrap; border: 2px solid transparent;
+    }
+    .call-btn:hover {
+      background: transparent; color: var(--green);
+      border-color: var(--green); box-shadow: none;
+    }
+
+    #menu-check { display: none; }
+    .menu-toggle {
+      display: none; cursor: pointer; width: 42px; height: 42px;
+      border-radius: var(--radius-sm); background: var(--green);
+      color: #fff; font-size: 20px; align-items: center; justify-content: center;
+      border: none;
+    }
+
+    /* ─── SECTION TITLES ─── */
+    .title { text-align: center; margin-bottom: 56px; }
+    .title .eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 14px;
+    }
+    .title .eyebrow::before, .title .eyebrow::after {
+      content: ''; width: 28px; height: 1px; background: var(--gold);
+    }
+    .title h2 {
+      font-family: 'Playfair Display', serif; font-weight: 700;
+      color: var(--green); font-size: clamp(30px, 4vw, 48px);
+      line-height: 1.15;
+    }
+    .title p { max-width: 600px; margin: 14px auto 0; color: var(--text-muted); font-size: 16px; line-height: 1.8; }
+
+    /* ─── HERO ─── */
+    .hero {
+      position: relative; z-index: 2;
+      display: grid; grid-template-columns: 1fr 1fr;
+      align-items: center; gap: 60px;
+      min-height: calc(100vh - 80px); padding: 48px 0;
+    }
+    .hero-text { position: relative; z-index: 2; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 8px 18px; border-radius: 999px;
+      background: rgba(200,144,42,.1); border: 1px solid rgba(200,144,42,.3);
+      color: var(--gold); font-size: 13px; font-weight: 600; letter-spacing: .04em;
+      margin-bottom: 20px; animation: fadeUp .7s ease both;
+    }
+    .badge-dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--gold);
+      box-shadow: 0 0 0 4px rgba(200,144,42,.2);
+      animation: pulse 2s ease infinite;
+    }
+    @keyframes pulse { 0%,100%{box-shadow:0 0 0 4px rgba(200,144,42,.2)} 50%{box-shadow:0 0 0 8px rgba(200,144,42,.06)} }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 5.5vw, 78px);
+      line-height: 1.08; color: var(--green);
+      margin-bottom: 6px; animation: fadeUp .8s ease .1s both;
+    }
+    h1 .gold-text {
+      display: block; color: var(--gold);
+      position: relative;
+    }
+    h1 .gold-text::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 100%; height: 3px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .hero-sub {
+      margin: 24px 0 36px; max-width: 560px;
+      font-size: 17px; line-height: 1.85; color: var(--text-muted);
+      animation: fadeUp .8s ease .2s both;
+    }
+
+    .actions { display: flex; flex-wrap: wrap; gap: 14px; animation: fadeUp .8s ease .3s both; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 30px; border-radius: var(--radius-md);
+      background: var(--green); color: #fff;
+      font-weight: 600; font-size: 15px; letter-spacing: .01em;
+      box-shadow: 0 8px 28px rgba(10,51,32,.28);
+      transition: all .3s;
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 14px 36px rgba(10,51,32,.34); background: var(--green-mid); }
+    .btn-secondary {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 30px; border-radius: var(--radius-md);
+      border: 1.5px solid rgba(10,51,32,.25); color: var(--green);
+      font-weight: 600; font-size: 15px; background: rgba(255,255,255,.7);
+      transition: all .3s;
+    }
+    .btn-secondary:hover { border-color: var(--green); background: #fff; transform: translateY(-3px); }
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 30px; border-radius: var(--radius-md);
+      background: var(--gold); color: #fff;
+      font-weight: 600; font-size: 15px;
+      box-shadow: 0 8px 28px rgba(200,144,42,.35);
+      transition: all .3s;
+    }
+    .btn-gold:hover { transform: translateY(-3px); background: var(--gold-light); }
+
+    .stats {
+      display: grid; grid-template-columns: repeat(3,1fr); gap: 14px;
+      margin-top: 48px; animation: fadeUp .8s ease .4s both;
+    }
+    .stat {
+      padding: 20px 18px; border-radius: var(--radius-md);
+      background: var(--white);
+      border: 1px solid rgba(200,144,42,.18);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+    }
+    .stat b {
+      display: block; font-family: 'Playfair Display', serif;
+      color: var(--green); font-size: 28px; font-weight: 700; line-height: 1;
+    }
+    .stat small { color: var(--text-muted); font-size: 12px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; margin-top: 6px; display: block; }
+
+    /* ─── HERO VISUAL ─── */
+    .visual {
+      position: relative; display: flex; align-items: center; justify-content: center;
+      min-height: 560px; animation: fadeIn 1s ease .2s both;
+    }
+    .visual-ring {
+      position: absolute;
+      width: min(500px, 88vw); height: min(500px, 88vw);
+      border-radius: 50%;
+      background: rgba(255,255,255,.6);
+      border: 1px solid rgba(200,144,42,.2);
+      box-shadow: inset 0 0 0 16px rgba(200,144,42,.07), var(--shadow-lg);
+    }
+    .visual-ring::before {
+      content: ''; position: absolute; inset: 24px; border-radius: 50%;
+      border: 1px dashed rgba(200,144,42,.35);
+      animation: spinSlow 20s linear infinite;
+    }
+    .visual-ring::after {
+      content: ''; position: absolute; inset: -20px; border-radius: 50%;
+      border: 1px dashed rgba(10,51,32,.15);
+      animation: spinSlow 28s linear infinite reverse;
+    }
+    @keyframes spinSlow { to { transform: rotate(360deg); } }
+
+    .main-logo {
+      position: relative; z-index: 3;
+      width: min(440px, 86vw); height: min(440px, 86vw);
+      object-fit: cover; border-radius: 50%;
+      box-shadow: 0 24px 60px rgba(10,51,32,.2);
+      animation: floatImg 5s ease-in-out infinite;
+    }
+    @keyframes floatImg { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-16px)} }
+
+    .hero-tag {
+      position: absolute; z-index: 5;
+      background: var(--white); border-radius: var(--radius-md);
+      padding: 12px 16px; box-shadow: var(--shadow-md);
+      border: 1px solid rgba(200,144,42,.2);
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; font-weight: 600; color: var(--green);
+      white-space: nowrap;
+    }
+    .hero-tag .ti { font-size: 20px; color: var(--gold); }
+    .hero-tag.t1 { top: 50px; right: -10px; animation: tagFloat 4s ease-in-out infinite; }
+    .hero-tag.t2 { bottom: 60px; left: -10px; animation: tagFloat 4s ease-in-out 1.5s infinite; }
+    @keyframes tagFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+
+    /* ─── ABOUT ─── */
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    .img-frame {
+      position: relative; border-radius: var(--radius-xl); overflow: hidden;
+      background: linear-gradient(145deg, rgba(10,51,32,.06), rgba(200,144,42,.1));
+      min-height: 480px; display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow-lg); border: 1px solid rgba(200,144,42,.15);
+    }
+    .img-frame img {
+      width: 78%; object-fit: contain;
+      filter: drop-shadow(0 20px 30px rgba(0,0,0,.18));
+      animation: floatImg 6s ease-in-out infinite;
+    }
+    .img-frame .corner-badge {
+      position: absolute; bottom: 24px; right: 24px;
+      background: var(--green); color: #fff; padding: 12px 18px;
+      border-radius: var(--radius-md); font-size: 13px; font-weight: 600;
+      box-shadow: var(--shadow-md);
+    }
+    .img-frame .corner-badge b { display: block; font-size: 22px; font-family: 'Playfair Display', serif; }
+
+    .content-box h2 {
+      font-family: 'Playfair Display', serif; color: var(--green);
+      font-size: clamp(32px,3.5vw,46px); line-height: 1.18; margin-bottom: 6px;
+    }
+    .content-box .subhead { color: var(--gold); font-weight: 600; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 16px; }
+    .content-box p { color: var(--text-muted); line-height: 1.9; margin-bottom: 16px; font-size: 15.5px; }
+    .feature-list { list-style: none; display: grid; gap: 12px; margin-top: 24px; }
+    .feature-list li {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 16px 20px; border-radius: var(--radius-md);
+      background: var(--white); border: 1px solid rgba(200,144,42,.15);
+      box-shadow: var(--shadow-sm); font-weight: 500; color: var(--green); font-size: 15px;
+    }
+    .feature-list li .icon-wrap {
+      width: 34px; height: 34px; min-width: 34px; border-radius: 10px;
+      background: rgba(200,144,42,.12); display: flex; align-items: center; justify-content: center;
+      color: var(--gold); font-size: 17px;
+    }
+
+    /* ─── PRODUCTS ─── */
+    .products-section { background: linear-gradient(170deg, var(--green) 0%, #081f12 100%); }
+    .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    .product-text h2 { font-family: 'Playfair Display', serif; color: var(--white); font-size: clamp(32px,3.5vw,46px); line-height: 1.18; margin-bottom: 6px; }
+    .product-text .subhead { color: var(--gold-light); font-weight: 600; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 16px; }
+    .product-text p { color: rgba(255,255,255,.72); line-height: 1.9; margin-bottom: 16px; font-size: 15.5px; }
+    .product-list { list-style: none; display: grid; gap: 12px; margin-top: 24px; }
+    .product-list li {
+      display: flex; align-items: center; gap: 12px;
+      padding: 14px 18px; border-radius: var(--radius-md);
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.12);
+      font-weight: 500; color: #fff; font-size: 15px;
+    }
+    .product-list li .ti { color: var(--gold-light); font-size: 18px; }
+
+    .price-card {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(200,144,42,.35);
+      border-radius: var(--radius-xl); padding: 40px 36px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.3);
+      position: relative; overflow: hidden;
+    }
+    .price-card::before {
+      content: ''; position: absolute; top: -60px; right: -60px;
+      width: 200px; height: 200px; border-radius: 50%;
+      background: rgba(200,144,42,.08);
+    }
+    .price-card .pcard-label {
+      font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
+      color: var(--gold-light); margin-bottom: 10px;
+    }
+    .price-card h3 { font-family: 'Playfair Display', serif; font-size: 30px; color: #fff; margin-bottom: 12px; line-height: 1.2; }
+    .price-card p { color: rgba(255,255,255,.65); line-height: 1.8; font-size: 15px; margin-bottom: 16px; }
+    .price-val {
+      font-family: 'Playfair Display', serif; font-size: 52px; color: var(--gold-light);
+      font-weight: 700; line-height: 1; margin: 18px 0;
+    }
+    .price-val span { font-size: 16px; font-weight: 400; color: rgba(255,255,255,.5); font-family: 'Inter', sans-serif; }
+    .pcard-divider { height: 1px; background: rgba(255,255,255,.1); margin: 22px 0; }
+    .pcard-features { display: grid; gap: 10px; margin-bottom: 28px; }
+    .pcard-feature { display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,.8); }
+    .pcard-feature .ti { color: var(--gold-light); }
+
+    /* ─── GALLERY / ACTIVITIES ─── */
+    .gallery-section { padding: 80px 0; background: var(--cream2); overflow: hidden; }
+    .card-slider { overflow: hidden; width: 100%; }
+    .card-track {
+      display: flex; gap: 24px; width: max-content;
+      animation: scrollCards 28s linear infinite;
+    }
+    .card-slider:hover .card-track { animation-play-state: paused; }
+    @keyframes scrollCards { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+
+    .gallery-card {
+      width: 320px; background: var(--white); border-radius: var(--radius-lg); overflow: hidden;
+      box-shadow: var(--shadow-md); border: 1px solid rgba(200,144,42,.15); flex-shrink: 0;
+      transition: transform .4s, box-shadow .4s;
+    }
+    .gallery-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
+    .gallery-card img { width: 100%; height: 220px; object-fit: cover; }
+    .gallery-card-body { padding: 22px 22px 24px; }
+    .gallery-card-body h4 {
+      font-family: 'Playfair Display', serif; color: var(--green);
+      font-size: 20px; margin-bottom: 8px;
+    }
+    .gallery-card-body p { color: var(--text-muted); font-size: 14px; line-height: 1.7; }
+
+    /* ─── QUALITY CARDS ─── */
+    .quality-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
+    .q-card {
+      padding: 32px 26px; border-radius: var(--radius-lg);
+      background: var(--white); border: 1px solid rgba(200,144,42,.15);
+      box-shadow: var(--shadow-sm);
+      transition: all .35s; position: relative; overflow: hidden;
+    }
+    .q-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform: scaleX(0); transform-origin: left; transition: transform .4s;
+    }
+    .q-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-lg); }
+    .q-card:hover::before { transform: scaleX(1); }
+    .q-icon {
+      width: 60px; height: 60px; border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--green), var(--green-mid));
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gold-light); font-size: 26px; margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(10,51,32,.2);
+    }
+    .q-card h3 { font-family: 'Playfair Display', serif; color: var(--green); font-size: 20px; margin-bottom: 10px; }
+    .q-card p { color: var(--text-muted); font-size: 14px; line-height: 1.75; }
+
+    /* ─── PROCESS ─── */
+    .process-section { background: var(--cream2); }
+    .process-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; position: relative; }
+    .process-grid::before {
+      content: ''; position: absolute; top: 38px; left: 10%; right: 10%; height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold-light), var(--gold), var(--gold-light), transparent);
+    }
+    .step {
+      padding: 30px 24px; text-align: center; position: relative;
+    }
+    .step-num {
+      width: 76px; height: 76px; border-radius: 50%;
+      background: var(--white); border: 2px solid var(--gold);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700;
+      color: var(--gold); margin: 0 auto 20px;
+      box-shadow: 0 4px 20px rgba(200,144,42,.2);
+      position: relative; z-index: 2;
+    }
+    .step h3 { font-family: 'Playfair Display', serif; color: var(--green); font-size: 18px; margin-bottom: 10px; }
+    .step p { color: var(--text-muted); font-size: 14px; line-height: 1.75; }
+
+    /* ─── CONTACT ─── */
+    .contact-wrap { display: grid; grid-template-columns: .9fr 1.1fr; gap: 32px; align-items: start; }
+    .contact-info {
+      border-radius: var(--radius-xl); padding: 40px 36px;
+      background: linear-gradient(160deg, var(--green) 0%, #061b0e 100%);
+      color: #fff; box-shadow: var(--shadow-lg);
+    }
+    .contact-info h2 { font-family: 'Playfair Display', serif; font-size: 36px; color: var(--gold-light); margin-bottom: 14px; }
+    .contact-info > p { color: rgba(255,255,255,.7); line-height: 1.8; font-size: 15px; margin-bottom: 24px; }
+    .contact-item {
+      padding: 16px 18px; border-radius: var(--radius-md);
+      background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1);
+      margin-bottom: 12px;
+    }
+    .contact-item b { color: var(--gold-light); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+    .contact-item p { color: rgba(255,255,255,.8); font-size: 14px; margin-top: 4px; line-height: 1.65; }
+
+    .contact-form {
+      background: var(--white); border-radius: var(--radius-xl); padding: 40px 36px;
+      box-shadow: var(--shadow-md); border: 1px solid rgba(200,144,42,.15);
+      display: flex; flex-direction: column; gap: 18px;
+    }
+    .contact-form h3 {
+      font-family: 'Playfair Display', serif; font-size: 26px; color: var(--green); margin-bottom: 4px;
+    }
+    .contact-form .form-subtitle { color: var(--text-muted); font-size: 14px; margin-bottom: 6px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: var(--green); letter-spacing: .02em; }
+    .contact-form input, .contact-form select, .contact-form textarea {
+      padding: 13px 16px; border: 1.5px solid rgba(10,51,32,.15); border-radius: var(--radius-sm);
+      font-size: 15px; font-family: 'Inter', sans-serif; color: var(--text);
+      background: var(--cream); outline: none; transition: all .25s;
+    }
+    .contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus {
+      border-color: var(--gold); background: #fff;
+      box-shadow: 0 0 0 4px rgba(200,144,42,.1);
+    }
+    .contact-form textarea { resize: vertical; min-height: 110px; }
+    .form-btn {
+      padding: 14px; border-radius: var(--radius-md);
+      background: var(--green); color: #fff; border: none;
+      font-size: 15px; font-weight: 600; font-family: 'Inter', sans-serif;
+      cursor: pointer; transition: all .3s; letter-spacing: .02em;
+      box-shadow: 0 6px 20px rgba(10,51,32,.25);
+    }
+    .form-btn:hover { background: var(--green-mid); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(10,51,32,.3); }
+
+    /* ─── FOOTER ─── */
+    footer { background: #040f07; color: rgba(255,255,255,.7); padding: 72px 0 24px; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.1fr; gap: 36px; }
+    .footer-logo { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+    .footer-logo img { width: 60px; height: 60px; border-radius: 50%; border: 2px solid rgba(200,144,42,.3); }
+    .footer-logo span { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: #fff; }
+    .footer-col p { line-height: 1.85; font-size: 14px; color: rgba(255,255,255,.55); }
+    .footer-col h4 { color: var(--gold-light); font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 18px; }
+    .footer-col a { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,.6); font-size: 14px; margin: 10px 0; transition: all .25s; }
+    .footer-col a:hover { color: var(--gold-light); transform: translateX(4px); }
+    .social { display: flex; gap: 10px; margin-top: 20px; }
+    .social a {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 15px; color: rgba(255,255,255,.65); margin: 0; transition: all .3s;
+    }
+    .social a:hover { background: var(--gold); border-color: var(--gold); color: #fff; transform: translateY(-3px); }
+    .footer-divider { height: 1px; background: rgba(255,255,255,.08); margin: 48px 0 22px; }
+    .copyright { text-align: center; font-size: 13px; color: rgba(255,255,255,.35); }
+
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes fadeIn { from{opacity:0;transform:scale(.97)} to{opacity:1;transform:scale(1)} }
+
+    /* ─── RESPONSIVE ─── */
+    @media(max-width:980px){
+      .menu-toggle { display: flex; }
+      nav {
+        position: fixed; top: 80px; left: 0; width: 100%;
+        flex-direction: column; align-items: stretch;
+        background: rgba(253,250,243,.98); padding: 16px 5%;
+        box-shadow: var(--shadow-lg); gap: 0;
+        transform: translateY(-110%); opacity: 0; pointer-events: none; transition: .3s;
+      }
+      nav a { padding: 14px 4px; border-bottom: 1px solid rgba(10,51,32,.08); }
+      #menu-check:checked ~ nav { transform: translateY(0); opacity: 1; pointer-events: auto; }
+      .hero,.about-grid,.product-grid,.contact-wrap { grid-template-columns: 1fr; }
+      .hero { min-height: auto; padding: 52px 0 40px; text-align: center; }
+      .hero-sub,.content-box p { max-width: 100%; }
+      .actions { justify-content: center; }
+      .stats { max-width: 500px; margin-left: auto; margin-right: auto; }
+      .quality-grid,.process-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .visual { min-height: 440px; }
+      .hero-tag { display: none; }
+      .process-grid::before { display: none; }
+    }
+    @media(max-width:640px){
+      .section { padding: 64px 0; }
+      .quality-grid,.process-grid,.footer-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(3,1fr); gap: 8px; }
+      .stat { padding: 14px 10px; }
+      .stat b { font-size: 22px; }
+      .contact-form,.contact-info { padding: 28px 22px; }
+      .img-frame { min-height: 300px; }
+    }
+    @media(max-width:420px){
+      .stats { grid-template-columns: 1fr; }
+      .brand span { font-size: 13px; max-width: 130px; }
+      .call-btn { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="bg-orb a"></div>
+    <div class="bg-orb b"></div>
+
+    <!-- HEADER -->
+    <header>
+      <div class="container nav-wrap">
+        <a class="brand" href="#home">
+          <img src="image/image.png" alt="Bikathnath Logo">
+          <span>Shree Bikathnath Food & Organic</span>
+        </a>
+        <input type="checkbox" id="menu-check">
+        <label for="menu-check" class="menu-toggle"><i class="bi bi-list"></i></label>
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#products">Products</a>
+          <a href="#quality">Quality</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="call-btn" href="tel:+917054743974">Order Now</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero container" id="home">
+      <div class="hero-text">
+        <div class="badge"><span class="badge-dot"></span> 100% Organic Pahadi Ghee</div>
+        <h1>Shree<br>Bikathnath<br><span class="gold-text">Organic Ghee</span></h1>
+        <p class="hero-sub">Traditional taste, premium quality and natural purity in every spoon — made for families who prefer authentic, healthy and organic food products.</p>
+        <div class="actions">
+          <a class="btn-primary" href="#products"><i class="bi bi-box-seam"></i> Explore Product</a>
+          <a class="btn-secondary" href="#quality"><i class="bi bi-patch-check"></i> Why Choose Us</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>100%</b><small>Natural Quality</small></div>
+          <div class="stat"><b>Pure</b><small>Pahadi Taste</small></div>
+          <div class="stat"><b>Fresh</b><small>Organic</small></div>
+        </div>
+      </div>
+      <div class="visual">
+        <div class="visual-ring"></div>
+        <img class="main-logo" src="image/image_5.png" alt="Bikathnath Ghee">
+        <div class="hero-tag t1"><i class="bi bi-tree-fill ti"></i> Mountain Fresh</div>
+        <div class="hero-tag t2"><i class="bi bi-award-fill ti"></i> Premium Quality</div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="img-frame">
+          <img src="image/image_1.png" alt="Organic Ghee">
+          <div class="corner-badge"><b>100%</b> Organic</div>
+        </div>
+        <div class="content-box">
+          <div class="subhead">Our Story</div>
+          <h2>About Bikathnath</h2>
+          <p>Bikathnath Food & Organic brings natural, traditional and premium organic food products with a strong focus on purity, taste and trust.</p>
+          <p>Our Organic Pahadi Ghee is inspired by village freshness and mountain purity, designed for daily healthy cooking and authentic Indian taste.</p>
+          <ul class="feature-list">
+            <li><div class="icon-wrap"><i class="bi bi-patch-check-fill"></i></div> Premium organic product quality</li>
+            <li><div class="icon-wrap"><i class="bi bi-gift-fill"></i></div> Traditional taste with modern packaging</li>
+            <li><div class="icon-wrap"><i class="bi bi-house-heart-fill"></i></div> Perfect for family, pooja and daily cooking</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="section products-section" id="products">
+      <div class="container product-grid">
+        <div class="product-text">
+          <div class="subhead">Featured Product</div>
+          <h2>Organic Pahadi Ghee</h2>
+          <p>Rich aroma, golden texture and pure traditional flavor. Shree Bikathnath Organic Pahadi Ghee is perfect for roti, dal, sweets, pooja and healthy cooking.</p>
+          <ul class="product-list">
+            <li><i class="bi bi-brightness-high-fill ti"></i> Natural golden texture</li>
+            <li><i class="bi bi-wind ti"></i> Rich aroma and smooth taste</li>
+            <li><i class="bi bi-box-seam-fill ti"></i> Premium glass/jar style branding ready</li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <div class="pcard-label">Shree Bikathnath</div>
+          <h3>Organic Pahadi Ghee</h3>
+          <p>Pure, authentic and naturally prepared using traditional methods.</p>
+          <div class="price-val">Pure <span>/ Premium Quality</span></div>
+          <div class="pcard-divider"></div>
+          <div class="pcard-features">
+            <div class="pcard-feature"><i class="bi bi-check-circle-fill ti"></i> Available in multiple packing sizes</div>
+            <div class="pcard-feature"><i class="bi bi-check-circle-fill ti"></i> Bulk order & dealership available</div>
+            <div class="pcard-feature"><i class="bi bi-check-circle-fill ti"></i> Pan India delivery</div>
+          </div>
+          <a class="btn-gold" href="#contact"><i class="bi bi-telephone-fill"></i> Request Price</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY / ACTIVITIES -->
+    <section class="gallery-section">
+      <div class="title">
+        <div class="eyebrow">Gallery</div>
+        <h2>Our Activities</h2>
+        <p>Serving society with dedication, development and positive change.</p>
+      </div>
+      <div class="card-slider">
+        <div class="card-track">
+          <div class="gallery-card">
+            <img src="image/image_4.png" alt="Public Welfare">
+            <div class="gallery-card-body"><h4>Public Welfare</h4><p>Working continuously for education, healthcare and social development.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/image_2.png" alt="Community Support">
+            <div class="gallery-card-body"><h4>Community Support</h4><p>Supporting local communities through various welfare initiatives.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/image_1.png" alt="Nation Building">
+            <div class="gallery-card-body"><h4>Nation Building</h4><p>Committed to transparency, growth and citizen empowerment.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/image_3.png" alt="Public Welfare">
+            <div class="gallery-card-body"><h4>Public Welfare</h4><p>Working continuously for education, healthcare and social development.</p></div>
+          </div>
+          <!-- Duplicates for infinite scroll -->
+          <div class="gallery-card">
+            <img src="image/image_4.png" alt="Public Welfare">
+            <div class="gallery-card-body"><h4>Public Welfare</h4><p>Working continuously for education, healthcare and social development.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/image_2.png" alt="Community Support">
+            <div class="gallery-card-body"><h4>Community Support</h4><p>Supporting local communities through various welfare initiatives.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/image_1.png" alt="Nation Building">
+            <div class="gallery-card-body"><h4>Nation Building</h4><p>Committed to transparency, growth and citizen empowerment.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/image_3.png" alt="Public Welfare">
+            <div class="gallery-card-body"><h4>Public Welfare</h4><p>Working continuously for education, healthcare and social development.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUALITY -->
+    <section class="section" id="quality">
+      <div class="container">
+        <div class="title">
+          <div class="eyebrow">Our Quality</div>
+          <h2>Why Choose Us</h2>
+          <p>Professional branding, trusted purity and authentic taste for every household.</p>
+        </div>
+        <div class="quality-grid">
+          <div class="q-card">
+            <div class="q-icon"><i class="bi bi-tree-fill"></i></div>
+            <h3>Organic Purity</h3>
+            <p>Prepared with a clean and natural approach to deliver authentic organic goodness in every jar.</p>
+          </div>
+          <div class="q-card">
+            <div class="q-icon"><i class="bi bi-basket-fill"></i></div>
+            <h3>Rich Taste</h3>
+            <p>Perfect aroma, smooth texture and traditional flavor for your daily cooking needs.</p>
+          </div>
+          <div class="q-card">
+            <div class="q-icon"><i class="bi bi-wind"></i></div>
+            <h3>Pahadi Feel</h3>
+            <p>Inspired by mountain freshness and authentic natural village lifestyle traditions.</p>
+          </div>
+          <div class="q-card">
+            <div class="q-icon"><i class="bi bi-box-seam-fill"></i></div>
+            <h3>Premium Pack</h3>
+            <p>Attractive product branding suitable for retail, gifting and online sales channels.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section process-section" id="process">
+      <div class="container">
+        <div class="title">
+          <div class="eyebrow">Simple Process</div>
+          <h2>From Purity To Your Home</h2>
+          <p>Every step is focused on quality, freshness and customer satisfaction.</p>
+        </div>
+        <div class="process-grid">
+          <div class="step">
+            <div class="step-num">01</div>
+            <h3>Selection</h3>
+            <p>Best quality raw material and natural ingredients sourced carefully.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <h3>Preparation</h3>
+            <p>Traditional process for authentic aroma, taste and natural goodness.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <h3>Packing</h3>
+            <p>Clean and attractive packaging that gives a premium brand feel.</p>
+          </div>
+          <div class="step">
+            <div class="step-num">04</div>
+            <h3>Delivery</h3>
+            <p>Fresh product delivered to customers with utmost care and speed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="title">
+          <div class="eyebrow">Get In Touch</div>
+          <h2>Contact Us</h2>
+          <p>For dealership, bulk order, product price or branding inquiry — we'd love to hear from you.</p>
+        </div>
+        <div class="contact-wrap">
+          <div class="contact-info">
+            <h2>Let's Connect</h2>
+            <p>Reach out for dealership opportunities, bulk orders, pricing or any product inquiry.</p>
+            <div class="contact-item">
+              <b>Phone</b>
+              <p>+91 9472879003<br>+91 7870279423</p>
+            </div>
+            <div class="contact-item">
+              <b>Email</b>
+              <p>shribikatnathfoodandorganic@gmail.com</p>
+            </div>
+            <div class="contact-item">
+              <b>Corporate Office</b>
+              <p>Word No-1, Rampurcolony, Bhabhua<br>Dist. Kaimur (Bihar) — 821101</p>
+            </div>
+            <div class="contact-item">
+              <b>Work Location</b>
+              <p>Village: Karar, Post: Kolhua, Block: Adhaura<br>Dist. Kaimur — Pin 821102</p>
+            </div>
+          </div>
+
+          <form action="../admin/send-mail.php" method="POST" class="contact-form">
+            <div>
+              <h3>Send an Inquiry</h3>
+              <p class="form-subtitle">We typically respond within 24 hours.</p>
+            </div>
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label>Mobile Number *</label>
+              <input type="tel" name="mobile" placeholder="Enter your mobile number" required>
+            </div>
+            <div class="form-group">
+              <label>Email Address</label>
+              <input type="email" name="email" placeholder="Enter your email address">
+            </div>
+            <div class="form-group">
+              <label>Inquiry Type</label>
+              <select name="subject">
+                <option value="">Select Inquiry Type</option>
+                <option>Dealership Inquiry</option>
+                <option>Bulk Order Inquiry</option>
+                <option>Product Price Inquiry</option>
+                <option>Branding Partnership</option>
+                <option>General Inquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Your Message</label>
+              <textarea name="message" rows="5" placeholder="Please write your requirements or inquiry here..."></textarea>
+            </div>
+            <button type="submit" name="submit" class="form-btn">Send Inquiry &nbsp;→</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <div class="footer-logo">
+              <img src="image/image.png" alt="Bikathnath Logo">
+              <span>Shree Bikathnath</span>
+            </div>
+            <p>Shree Bikathnath Food & Organic offers premium Organic Pahadi Ghee with traditional taste, natural purity and professional branding.</p>
+            <div class="social">
+              <a href="https://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.linkedin.com/in/" target="_blank"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a href="https://wa.me/919472879003?text=Hello%20Bikathnath%20Food%20%26%20Organic,%20I%20want%20more%20information." target="_blank"><i class="bi bi-whatsapp"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#home"><i class="bi bi-chevron-right"></i>Home</a>
+            <a href="#about"><i class="bi bi-chevron-right"></i>About</a>
+            <a href="#products"><i class="bi bi-chevron-right"></i>Products</a>
+            <a href="#quality"><i class="bi bi-chevron-right"></i>Quality</a>
+          </div>
+          <div class="footer-col">
+            <h4>Products</h4>
+            <a href="#products"><i class="bi bi-chevron-right"></i>Organic Pahadi Ghee</a>
+            <a href="#products"><i class="bi bi-chevron-right"></i>Organic Food</a>
+            <a href="#products"><i class="bi bi-chevron-right"></i>Premium Pack</a>
+            <a href="#contact"><i class="bi bi-chevron-right"></i>Bulk Order</a>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <a href="tel:+917054743974"><i class="bi bi-telephone"></i>+91 9472879003, <br> +91 7870279423</a>
+            <a href="mailto:shribikatnathfoodandorganic@gmail.com"><i class="bi bi-envelope"></i>Email Us</a>
+            <a href="#contact"><i class="bi bi-geo-alt"></i>Bihar, India</a>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="copyright">© 2026 Shree Bikathnath Food & Organic. All Rights Reserved. | Designed for premium organic brand.</div>
+      </div>
+    </footer>
+  </main>
+</body>
+</html>
