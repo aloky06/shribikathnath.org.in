@@ -4,6 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shree Bikathnath Food & Organic | Organic Pahadi Ghee</title>
+  <meta name="description" content="Shree Bikathnath Food & Organic offers premium organic pahadi ghee and natural food products with authentic taste, purity, and trust from Bihar, India." />
+  <meta name="keywords" content="organic pahadi ghee, pure ghee, organic food Bihar, Shree Bikathnath, organic products, premium ghee, natural ghee, healthy food" />
+  <meta name="author" content="Shree Bikathnath Food & Organic" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0a3320" />
+  <link rel="canonical" href="https://shribikathnath.org.in/" />
+  <meta property="og:title" content="Shree Bikathnath Food & Organic | Organic Pahadi Ghee" />
+  <meta property="og:description" content="Premium organic pahadi ghee and natural food products made with purity, authenticity, and traditional care." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shribikathnath.org.in/" />
+  <meta property="og:image" content="https://shribikathnath.org.in/image/image_5.png" />
+  <meta property="og:site_name" content="Shree Bikathnath Food & Organic" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Shree Bikathnath Food & Organic" />
+  <meta name="twitter:description" content="Premium organic pahadi ghee and natural food products from Bihar." />
+  <meta name="twitter:image" content="https://shribikathnath.org.in/image/image_5.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -39,8 +55,11 @@
       background: var(--cream);
       overflow-x: hidden;
       line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
+    img { display: block; max-width: 100%; }
     a { text-decoration: none; }
     .container { width: min(1160px, 92%); margin: 0 auto; }
     .section { padding: 96px 0; }
@@ -551,20 +570,52 @@
       .visual { min-height: 440px; }
       .hero-tag { display: none; }
       .process-grid::before { display: none; }
+      .gallery-card { width: min(300px, 72vw); }
+      .card-track { gap: 18px; }
     }
     @media(max-width:640px){
       .section { padding: 64px 0; }
-      .quality-grid,.process-grid,.footer-grid { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: repeat(3,1fr); gap: 8px; }
+      .container { width: min(92%, 1160px); }
+      .hero { padding-top: 36px; }
+      h1 { font-size: clamp(36px, 13vw, 58px); }
+      .hero-sub { font-size: 15px; }
+      .actions {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+      .btn-primary, .btn-secondary, .btn-gold {
+        width: 100%; justify-content: center;
+      }
+      .stats { grid-template-columns: 1fr; max-width: 220px; }
       .stat { padding: 14px 10px; }
       .stat b { font-size: 22px; }
+      .feature-list li, .product-list li {
+        padding: 12px 14px;
+      }
+      .quality-grid,.process-grid,.footer-grid { grid-template-columns: 1fr; }
       .contact-form,.contact-info { padding: 28px 22px; }
+      .contact-item { padding: 12px 14px; }
       .img-frame { min-height: 300px; }
+      .gallery-card { width: min(265px, 74vw); }
+      .gallery-card img { height: 210px; }
+      .gallery-card-body h4 { font-size: 18px; }
+      .title p { font-size: 15px; }
+      .brand span { font-size: 13px; max-width: 130px; }
+      .nav-wrap { height: 74px; }
+      .menu-toggle { width: 38px; height: 38px; }
+      .footer-col a { white-space: normal; }
     }
     @media(max-width:420px){
       .stats { grid-template-columns: 1fr; }
-      .brand span { font-size: 13px; max-width: 130px; }
       .call-btn { display: none; }
+      .brand { gap: 8px; }
+      .brand img { width: 46px; height: 46px; }
+      .brand span { max-width: 122px; }
+      .gallery-card { width: min(235px, 72vw); }
+      .gallery-card img { height: 190px; }
+      .wa-header { padding: 16px 18px; }
+      .wa-body { padding: 18px; }
     }
   </style>
 </head>
@@ -1032,6 +1083,48 @@
       </div>
     </footer>
   </main>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "Shree Bikathnath Food & Organic",
+          "url": "https://shribikathnath.org.in/",
+          "logo": "https://shribikathnath.org.in/image/image.png",
+          "description": "Shree Bikathnath Food & Organic offers premium organic pahadi ghee and traditional natural food products with purity, taste, and trust.",
+          "email": "shribikatnathfoodandorganic@gmail.com",
+          "telephone": "+91-9472879003",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Word No-1, Rampurcolony",
+            "addressLocality": "Bhabhua",
+            "addressRegion": "Bihar",
+            "postalCode": "821101",
+            "addressCountry": "IN"
+          }
+        },
+        {
+          "@type": "Product",
+          "name": "Organic Pahadi Ghee",
+          "brand": {
+            "@type": "Brand",
+            "name": "Shree Bikathnath"
+          },
+          "category": "Organic Food",
+          "description": "Pure organic pahadi ghee with natural aroma, rich taste, and premium quality for daily cooking, pooja, and healthy lifestyle.",
+          "image": "https://shribikathnath.org.in/image/image_5.png",
+          "offers": {
+            "@type": "Offer",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/InStock",
+            "description": "Bulk order and dealership available"
+          }
+        }
+      ]
+    }
+  </script>
 
 </body>
 </html>
