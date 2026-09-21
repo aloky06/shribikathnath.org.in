@@ -345,26 +345,28 @@
     .pcard-feature .ti { color: var(--gold-light); }
 
     /* ─── GALLERY / ACTIVITIES ─── */
-    .gallery-section { padding: 80px 0; background: var(--cream2); overflow: hidden; }
+    .gallery-section { padding: 80px 0 92px; background: linear-gradient(180deg, var(--cream2) 0%, #efe5cd 100%); overflow: hidden; }
     .card-slider { overflow: hidden; width: 100%; }
     .card-track {
-      display: flex; gap: 24px; width: max-content;
-      animation: scrollCards 28s linear infinite;
+      display: flex; gap: 26px; width: max-content; padding: 10px 8px 6px;
+      animation: scrollCards 30s linear infinite;
     }
     .card-slider:hover .card-track { animation-play-state: paused; }
     @keyframes scrollCards { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
     .gallery-card {
-      width: 320px; background: var(--white); border-radius: var(--radius-lg); overflow: hidden;
-      box-shadow: var(--shadow-md); border: 1px solid rgba(200,144,42,.15); flex-shrink: 0;
+      width: 330px; background: rgba(255,255,255,.94); border-radius: 26px; overflow: hidden;
+      box-shadow: 0 18px 35px rgba(10,51,32,.1); border: 1px solid rgba(200,144,42,.18); flex-shrink: 0;
       transition: transform .4s, box-shadow .4s;
+      position: relative;
     }
-    .gallery-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
-    .gallery-card img { width: 100%; height: 220px; object-fit: cover; }
-    .gallery-card-body { padding: 22px 22px 24px; }
+    .gallery-card:hover { transform: translateY(-10px); box-shadow: 0 24px 48px rgba(10,51,32,.16); }
+    .gallery-card img { width: 100%; height: 240px; object-fit: cover; display: block; }
+    .gallery-card-body { padding: 20px 20px 22px; }
     .gallery-card-body h4 {
       font-family: 'Playfair Display', serif; color: var(--green);
       font-size: 20px; margin-bottom: 8px;
+      letter-spacing: .02em;
     }
     .gallery-card-body p { color: var(--text-muted); font-size: 14px; line-height: 1.7; }
 
@@ -676,37 +678,94 @@
       <div class="card-slider">
         <div class="card-track">
           <div class="gallery-card">
-            <img src="image/image_4.png" alt="Public Welfare">
-            <div class="gallery-card-body"><h4>Public Welfare</h4><p>Working continuously for education, healthcare and social development.</p></div>
+            <img src="image/1.jpeg" alt="Our Activity 1">
+            <div class="gallery-card-body"><h4>Activity 1</h4><p>Community work, awareness and positive participation.</p></div>
           </div>
           <div class="gallery-card">
-            <img src="image/image_2.png" alt="Community Support">
-            <div class="gallery-card-body"><h4>Community Support</h4><p>Supporting local communities through various welfare initiatives.</p></div>
+            <img src="image/2.jpeg" alt="Our Activity 2">
+            <div class="gallery-card-body"><h4>Activity 2</h4><p>Dedicated efforts for public welfare and social growth.</p></div>
           </div>
           <div class="gallery-card">
-            <img src="image/image_1.png" alt="Nation Building">
-            <div class="gallery-card-body"><h4>Nation Building</h4><p>Committed to transparency, growth and citizen empowerment.</p></div>
+            <img src="image/3.jpeg" alt="Our Activity 3">
+            <div class="gallery-card-body"><h4>Activity 3</h4><p>Celebrating togetherness through service and unity.</p></div>
           </div>
           <div class="gallery-card">
-            <img src="image/image_3.png" alt="Public Welfare">
-            <div class="gallery-card-body"><h4>Public Welfare</h4><p>Working continuously for education, healthcare and social development.</p></div>
-          </div>
-          <!-- Duplicates for infinite scroll -->
-          <div class="gallery-card">
-            <img src="image/image_4.png" alt="Public Welfare">
-            <div class="gallery-card-body"><h4>Public Welfare</h4><p>Working continuously for education, healthcare and social development.</p></div>
+            <img src="image/4.jpeg" alt="Our Activity 4">
+            <div class="gallery-card-body"><h4>Activity 4</h4><p>Focused on local development and community progress.</p></div>
           </div>
           <div class="gallery-card">
-            <img src="image/image_2.png" alt="Community Support">
-            <div class="gallery-card-body"><h4>Community Support</h4><p>Supporting local communities through various welfare initiatives.</p></div>
+            <img src="image/5.jpeg" alt="Our Activity 5">
+            <div class="gallery-card-body"><h4>Activity 5</h4><p>Creating impact through public service and outreach.</p></div>
           </div>
           <div class="gallery-card">
-            <img src="image/image_1.png" alt="Nation Building">
-            <div class="gallery-card-body"><h4>Nation Building</h4><p>Committed to transparency, growth and citizen empowerment.</p></div>
+            <img src="image/6.jpeg" alt="Our Activity 6">
+            <div class="gallery-card-body"><h4>Activity 6</h4><p>Active participation in social welfare initiatives.</p></div>
           </div>
           <div class="gallery-card">
-            <img src="image/image_3.png" alt="Public Welfare">
-            <div class="gallery-card-body"><h4>Public Welfare</h4><p>Working continuously for education, healthcare and social development.</p></div>
+            <img src="image/7.jpeg" alt="Our Activity 7">
+            <div class="gallery-card-body"><h4>Activity 7</h4><p>Working toward a healthier and stronger society.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/8.jpeg" alt="Our Activity 8">
+            <div class="gallery-card-body"><h4>Activity 8</h4><p>Promoting trust, care and regional upliftment.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/9.jpeg" alt="Our Activity 9">
+            <div class="gallery-card-body"><h4>Activity 9</h4><p>Strengthening community bonds with purposeful action.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/10.jpeg" alt="Our Activity 10">
+            <div class="gallery-card-body"><h4>Activity 10</h4><p>Encouraging progress, harmony and social support.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/11.jpeg" alt="Our Activity 11">
+            <div class="gallery-card-body"><h4>Activity 11</h4><p>Building a better future through active service.</p></div>
+          </div>
+
+          <!-- duplicates for smooth infinite scroll -->
+          <div class="gallery-card">
+            <img src="image/1.jpeg" alt="Our Activity 1">
+            <div class="gallery-card-body"><h4>Activity 1</h4><p>Community work, awareness and positive participation.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/2.jpeg" alt="Our Activity 2">
+            <div class="gallery-card-body"><h4>Activity 2</h4><p>Dedicated efforts for public welfare and social growth.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/3.jpeg" alt="Our Activity 3">
+            <div class="gallery-card-body"><h4>Activity 3</h4><p>Celebrating togetherness through service and unity.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/4.jpeg" alt="Our Activity 4">
+            <div class="gallery-card-body"><h4>Activity 4</h4><p>Focused on local development and community progress.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/5.jpeg" alt="Our Activity 5">
+            <div class="gallery-card-body"><h4>Activity 5</h4><p>Creating impact through public service and outreach.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/6.jpeg" alt="Our Activity 6">
+            <div class="gallery-card-body"><h4>Activity 6</h4><p>Active participation in social welfare initiatives.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/7.jpeg" alt="Our Activity 7">
+            <div class="gallery-card-body"><h4>Activity 7</h4><p>Working toward a healthier and stronger society.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/8.jpeg" alt="Our Activity 8">
+            <div class="gallery-card-body"><h4>Activity 8</h4><p>Promoting trust, care and regional upliftment.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/9.jpeg" alt="Our Activity 9">
+            <div class="gallery-card-body"><h4>Activity 9</h4><p>Strengthening community bonds with purposeful action.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/10.jpeg" alt="Our Activity 10">
+            <div class="gallery-card-body"><h4>Activity 10</h4><p>Encouraging progress, harmony and social support.</p></div>
+          </div>
+          <div class="gallery-card">
+            <img src="image/11.jpeg" alt="Our Activity 11">
+            <div class="gallery-card-body"><h4>Activity 11</h4><p>Building a better future through active service.</p></div>
           </div>
         </div>
       </div>
